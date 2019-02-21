@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            width: 240px;
+            height: 160px;
+            border-radius: 4px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            margin: 20px auto;
+            color: #333;
+            text-align: center;
+        }
+        .download-btn {
+            width: 80px;
+            height: 36px;
+            line-height: 36px;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 6px;
+            box-shadow: 2px 2px 6px #999;
+            background-color: #358cac;
+            -webkit-user-select: none;
+        }
+        .download-btn:hover {
+            cursor: pointer;
+        }
+        .download-btn:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <img src="./img/icon48.png" alt="icon">
+    </h1>
+    <h3>快捷键：ctrl + s</h3>
+    <!-- <input type="text"> -->
+    <div class="download-btn" id="downloader">
+        <span>收集</span>
+    </div>
+    <script src="./popup.js"></script>
+</body>
+</html>
