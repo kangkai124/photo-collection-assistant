@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "图片收集助手",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "收集来自图虫、米拍、站酷等网站的照片",
     "icons": {
         "16": "img/icon.png",

@@ -11,11 +11,12 @@ function run() {
     var name = ''
     if (origin.includes('tuchong')) {
         urls = tuchong()
-        name = document.querySelector('.aside-post-title').textContent ||
+        name = (document.querySelector('.aside-post-title') && document.querySelector('.aside-post-title').textContent) ||
             document.querySelector('.aside-post-head').querySelector('.site-link').innerText ||
             "tuchong-image"
     } else if (origin.includes('mepai')) {
         urls = mepai()
+        name = "mepai-image"
     }
     chrome.runtime.sendMessage({
         photoUrls: urls,
