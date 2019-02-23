@@ -3,7 +3,7 @@ chrome.runtime.onMessage.addListener(
         request.photoUrls.forEach((url, i) => {
             chrome.downloads.download({
                 url,
-                filename: 'hah' + i
+                filename: `${request.name}-${i + 1}.jpg`
             })
         })
     });
