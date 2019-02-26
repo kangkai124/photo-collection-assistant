@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "图片收集助手",
-    "version": "0.0.3",
-    "description": "收集来自图虫、米拍、站酷等网站的照片",
+    "name": "摄影阅片助手",
+    "version": "0.0.4",
+    "description": "Help to download photos from photo community such as tuchong and mepai",
     "icons": {
         "16": "img/icon.png",
         "32": "img/icon.png",
@@ -11,7 +11,7 @@
     },
     "browser_action": {
         "default_icon": "img/icon.png",
-        "default_title": "图片收集助手",
+        "default_title": "摄影阅片助手",
         "default_popup": "popup.html"
     },
     "commands": {
@@ -35,7 +35,8 @@
                 "content-script.js"
             ],
             "matches": [
-                "<all_urls>"
+                "https://*.tuchong.com/*",
+                "https://*.mepai.me/*"
             ],
             "run_at": "document_start"
         }
