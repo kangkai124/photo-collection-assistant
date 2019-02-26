@@ -33,8 +33,10 @@ function mepai() {
 }
 
 function tuchong() {
-    var urls = Array.from(document.getElementsByClassName('scene-item')).map(t => {
+    var container = document.querySelector('.scene-container-next')
+    var urls = Array.from(container.getElementsByClassName('scene-item')).map(t => {
         return t.querySelector('img').src
     })
-    return urls
+    var total = parseInt(document.querySelector('.theater-indicator').textContent.split('/')[1])
+    return urls.slice(0, total)
 }
