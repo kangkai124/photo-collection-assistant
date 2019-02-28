@@ -17,7 +17,11 @@ function run() {
     } else if (origin.includes('mepai')) {
         urls = mepai()
         name = "mepai-image"
+    } else if (origin.includes('cnu')) {
+        urls = cnu()
+        name = 'cnu-image'
     }
+
     chrome.runtime.sendMessage({
         photoUrls: urls,
         name
@@ -39,4 +43,11 @@ function tuchong() {
     })
     var total = parseInt(document.querySelector('.theater-indicator').textContent.split('/')[1])
     return urls.slice(0, total)
+}
+
+function cnu() {
+    var urls = Array.from(document.getElementsByClassName('bodyImg')).map((t) => {
+        return t.src
+    })
+    return urls
 }

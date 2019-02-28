@@ -7,3 +7,16 @@ chrome.runtime.onMessage.addListener(
             })
         })
     });
+
+chrome.commands.onCommand.addListener(function (command) {
+    if (command === 'autoDownload') {
+        chrome.tabs.query({
+            currentWindow: true,
+            active: true
+        }, (tabs) => {
+            chrome.tabs.sendMessage(tabs[0].id, {
+                message: 'hello content'
+            })
+        })
+    }
+});
