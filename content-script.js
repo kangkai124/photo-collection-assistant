@@ -19,7 +19,10 @@ function run() {
         name = "mepai-image"
     } else if (origin.includes('cnu')) {
         urls = cnu()
-        name = 'cnu-image'
+        let workTitle = document.querySelector('.work-title').innerText || 'Untitled'
+        let author = document.querySelector('strong').innerText
+        name = workTitle + '-' + author + '-cnu'
+        // 'cnu-image'
     }
 
     chrome.runtime.sendMessage({
